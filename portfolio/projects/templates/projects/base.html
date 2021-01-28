@@ -1,0 +1,17 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+		<link href='https://fonts.googleapis.com/css?family=Capriola' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="{% static 'projects/main.css' %}">
+        <title></title>
+    </head>
+    <body>
+        {% include "projects/navigation.html" %}
+        <div id="flex-container">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

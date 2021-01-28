@@ -1,0 +1,12 @@
+{% extends "projects/base.html" %}
+
+{% block content %}
+    <div class="project-image" style="background-image: url('{{ project.image.url }}')"></div>
+    <div class="project-name">{{ project.title }}</div>
+    <div class="project-links">
+        <a href="#">Open Project</a>
+    </div>
+    <div class="project-description">{{ project.description }}</div>
+
+
+{% endblock %}
