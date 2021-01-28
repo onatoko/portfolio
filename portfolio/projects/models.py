@@ -18,7 +18,7 @@ class Project(models.Model):
     category = models.ManyToManyField(Category)
     description = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
-    link = models.URLField()
+    link = models.URLField(blank=True)
     image = models.ImageField(
         default="default.jpg", upload_to="project_images"
     )
