@@ -2,7 +2,7 @@
 
 {% block content %}
     {% for project in projects %}
-        <div class="content">
+        <div class="content" style="background-image: url('{{ project.image.url }}');">
             <div class="content-title">
                 <div class="content-title-text">
                     {{ project.title }}
