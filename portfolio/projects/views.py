@@ -11,10 +11,11 @@ def home(request):
 class ProjectListView(ListView):
     model = Project
     template_name = "projects/home.html"
+    context_object_name = projects
 
-    def get_queryset(self):
-        projects = Project.objects.all()
-        return projects
+    # def get_queryset(self):
+    #     projects = Project.objects.all()
+    #     return projects
 
     # def get_context_data(self, **kwargs):
     #     context = super(ImagePostList)
