@@ -137,7 +137,6 @@ a:hover {
 	width: 2px;
 	height: 100%;
 	position: absolute;
-	left: 150px;
 	top: 0px;
 	background-image: linear-gradient(red, orange, yellow, green, blue, fuchsia, brown, black, red);
 	background-size: 2px 300px;
@@ -147,6 +146,9 @@ a:hover {
 	animation-timing-function: linear;
 	animation-fill-mode: both;
 	transition-duration: 0.5s;
+
+	/* mobile */
+	left: 0px;
 }
 
 @keyframes scrolling {
@@ -181,6 +183,10 @@ a:hover {
 		height: auto;
 		left: 180px;
 		top: 0px;
+	}
+
+	#rainbow-scroll {
+		left: 150px;
 	}
 
 	.hide-in-mobile {
