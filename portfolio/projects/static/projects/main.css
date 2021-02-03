@@ -163,6 +163,29 @@ a:hover {
 	display: none;
 }
 
+.show-in-mobile {
+	display: initial;
+}
+
+.div-link-container {
+	float: right;
+	position: relative;
+	display: inline-block;
+}
+
+.div-link-content {
+	display: none;
+	position: absolute;
+	right: 0;
+	min-width: 100px;
+	z-index: 1;
+}
+
+.div-link {
+	padding: 12px 16px;
+	display: block;
+}
+
 @media only screen and (min-width: 768px) {
 	/* Desktop */
 
@@ -190,6 +213,29 @@ a:hover {
 	}
 
 	.hide-in-mobile {
+		display: initial;
+	}
+
+	.show-in-mobile {
+		display: none;
+	}
+
+	.div-link-container {
+		float: initial;
+		position: initial;
+		display: initial;
+	}
+
+	.div-link-content {
+		display: initial;
+		position: initial;
+		right: initial;
+		min-width: initial;
+		z-index: initial;
+	}
+
+	.div-link {
+		padding: initial;
 		display: initial;
 	}
 }
