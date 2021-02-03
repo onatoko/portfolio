@@ -186,6 +186,10 @@ a:hover {
 	display: block;
 }
 
+.div-link-container:hover .div-link-content{
+	display:block;
+}
+
 @media only screen and (min-width: 768px) {
 	/* Desktop */
 
@@ -236,6 +240,6 @@ a:hover {
 
 	.div-link {
 		padding: initial;
-		display: initial;
+		display: block;
 	}
 }
