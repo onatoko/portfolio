@@ -66,10 +66,13 @@ a:hover {
 
 #nav-content {
 	position: absolute;
-	top: 125px;
 	padding: 10px;
-	width: 100%;
-	text-align: center;
+
+	/* mobile */
+	top: 0px;
+	left: 50px;
+	text-align: left;
+	width: auto;
 }
 
 .nav-current {
@@ -154,6 +157,10 @@ a:hover {
 	100%	{background-position: 0 300px;}
 }
 
+.hide-in-mobile {
+	display: none;
+}
+
 @media only screen and (min-width: 768px) {
 	/* Desktop */
 
@@ -162,10 +169,21 @@ a:hover {
 		height: 100%;
 	}
 
+	#nav-content {
+		top: 125px;
+		left: 0px;
+		text-align: center;
+		width: 100%;
+	}
+
 	#flex-container {
 		width: auto;
 		height: auto;
 		left: 180px;
 		top: 0px;
+	}
+
+	.hide-in-mobile {
+		display: initial;
 	}
 }
