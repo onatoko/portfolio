@@ -28,7 +28,7 @@ a:hover {
 	position: absolute;
 	left: 0px;
 	top: 0px;
-	transition-duration: 0.5s;
+	/* transition-duration: 0.5s; */
 
 	/* mobile */
 	width: 100%;
@@ -52,17 +52,17 @@ a:hover {
 	top: 15px;
 	width: 100px;
 	height: 100px;
-	animation-name: rotate-initials;
+	/* animation-name: rotate-initials;
 	animation-duration: 15s;
-	animation-iteration-count: infinite;
+	animation-iteration-count: infinite; */
 }
 
-@keyframes rotate-initials {
+/* @keyframes rotate-initials {
 	0%		{transform: rotate(0deg);}
 	33%		{transform: rotate(-120deg);}
 	67%		{transform: rotate(-240deg);}
 	100%	{transform: rotate(-360deg);}
-}
+} */
 
 #nav-content {
 	position: absolute;
@@ -134,12 +134,7 @@ a:hover {
 }
 
 #rainbow-scroll {
-	width: 2px;
-	height: 100%;
 	position: absolute;
-	top: 0px;
-	background-image: linear-gradient(red, orange, yellow, green, blue, fuchsia, brown, black, red);
-	background-size: 2px 300px;
 	animation-name: scrolling;
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
@@ -148,15 +143,20 @@ a:hover {
 	transition-duration: 0.5s;
 
 	/* mobile */
+	background-image: linear-gradient(to right, red, orange, yellow, green, blue, fuchsia, brown, black, red);
 	left: 0px;
+	width: 2px;
+	height: 100%;
+	top: 0px;
+	background-size: 300px 2px;
 }
 
 @keyframes scrolling {
 	0%		{background-position: 0 0;}
-	25%		{background-position: 0 75px;}
-	50%		{background-position: 0 150px;}
-	75%		{background-position: 0 225px;}
-	100%	{background-position: 0 300px;}
+	25%		{background-position: 75px 0;}
+	50%		{background-position: 150px 0;}
+	75%		{background-position: 225px 0;}
+	100%	{background-position: 300px 0;}
 }
 
 .hide-in-mobile {
@@ -213,7 +213,20 @@ a:hover {
 	}
 
 	#rainbow-scroll {
+		background-image: linear-gradient(red, orange, yellow, green, blue, fuchsia, brown, black, red);
 		left: 150px;
+		width: 2px;
+		height: 100%;
+		top: 0px;
+		background-size: 2px 300px;
+	}
+
+	@keyframes scrolling {
+		0%		{background-position: 0 0;}
+		25%		{background-position: 0 75px;}
+		50%		{background-position: 0 150px;}
+		75%		{background-position: 0 225px;}
+		100%	{background-position: 0 300px;}
 	}
 
 	.hide-in-mobile {
