@@ -19,3 +19,9 @@ class ProjectListView(ListView):
 
     # def get_context_data(self, **kwargs):
     #     context = super(ImagePostList)
+
+
+class ProjectDetailView(DetailView):
+    model = Project
+    template_name = "projects/project.html"
+    context_object_name = "project"
