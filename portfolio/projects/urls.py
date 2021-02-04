@@ -6,6 +6,6 @@ urlpatterns = [
     path("", views.home, name="portfolio-home"),
     path("projects/", ProjectListView.as_view(), name="portfolio-projects"),
     path(
-        "project/<int:id>", ProjectDetailView.as_view(), name="project-detail"
+        "project/<int:pk>", ProjectDetailView.as_view(), name="project-detail"
     ),
 ]
