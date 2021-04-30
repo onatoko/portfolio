@@ -20,16 +20,6 @@ class Category(models.Model):
         return self.category
 
 
-class ProjectImage(models.Model):
-    project = models.ForeignKey(
-        Project, default=None, on_delete=models.CASCADE
-    )
-    images = models.FileField(upload_to="project_images")
-
-    def __str__(self):
-        return self.post.title
-
-
 class Project(models.Model):
     title = models.CharField(max_length=100)
     category = models.ManyToManyField(Category)
@@ -54,3 +44,13 @@ class Project(models.Model):
             output_size = (max_height, max_width)
             img.thumbnail(output_size)
             img.save(self.image.path)
+
+
+class ProjectImage(models.Model):
+    project = models.ForeignKey(
+        Project, default=None, on_delete=models.CASCADE
+    )
+    images = models.FileField(upload_to="project_images")
+
+    def __str__(self):
+        return self.post.title
